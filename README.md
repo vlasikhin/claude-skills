@@ -19,8 +19,7 @@ Skills are flat (no nesting by language). Prefixes provide grouping:
 ## Installation
 
 ```bash
-git clone git@github.com:vlasikhin/claude-skills.git ~/.claude-skills
-./install.sh
+git clone https://github.com/vlasikhin/claude-skills.git ~/.claude-skills && ~/.claude-skills/install.sh
 ```
 
 Or link individual skills:
