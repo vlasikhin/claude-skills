@@ -10,18 +10,16 @@ REPO_DIR="$(cd "$(dirname "$0")" && pwd)"
 mkdir -p "$SKILL_DIR"
 echo "Skills:"
 
-for skill in "$REPO_DIR"/*/; do
+for skill in "$REPO_DIR"/skills/*/; do
     name=$(basename "$skill")
     [[ "$name" == _* ]] && continue
-    [[ "$name" == .* ]] && continue
-    [[ "$name" == "agents" ]] && continue
     [[ ! -f "$skill/SKILL.md" ]] && continue
 
-    if [ ! -e "$SKILL_DIR/$name" ]; then
+    if [ -L "$SKILL_DIR/$name" ] || [ -e "$SKILL_DIR/$name" ]; then
+        echo "  · exists: $name (skipped)"
+    else
         ln -s "$skill" "$SKILL_DIR/$name"
         echo "  ✓ linked: $name"
-    else
-        echo "  · exists: $name (skipped)"
     fi
 done
 
@@ -35,11 +33,11 @@ if [ -d "$REPO_DIR/agents" ]; then
         [ -f "$agent" ] || continue
         name=$(basename "$agent")
 
-        if [ ! -e "$AGENT_DIR/$name" ]; then
+        if [ -L "$AGENT_DIR/$name" ] || [ -e "$AGENT_DIR/$name" ]; then
+            echo "  · exists: $name (skipped)"
+        else
             ln -s "$agent" "$AGENT_DIR/$name"
             echo "  ✓ linked: $name"
-        else
-            echo "  · exists: $name (skipped)"
         fi
     done
 fi

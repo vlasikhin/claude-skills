@@ -1,4 +1,6 @@
-# Claude Skills Repository
+# Claude Toolkit
+
+Skills live in `skills/`, agents in `agents/`.
 
 ## Skill Structure Rules (from Anthropic's Guide)
 
@@ -29,11 +31,12 @@
 
 ### File Structure
 ```
-your-skill-name/
-├── SKILL.md          # required
-├── scripts/          # optional — executable code
-├── references/       # optional — documentation loaded as needed
-└── assets/           # optional — templates, fonts, icons
+skills/
+└── your-skill-name/
+    ├── SKILL.md          # required
+    ├── scripts/          # optional — executable code
+    ├── references/       # optional — documentation loaded as needed
+    └── assets/           # optional — templates, fonts, icons
 ```
 
 ### Description Best Practices
@@ -46,3 +49,22 @@ your-skill-name/
 - Missing trigger phrases
 - Instructions too verbose — move details to references/
 - Not putting critical instructions at the top
+
+## Agent Structure Rules
+
+### File Format
+- `.md` files in `agents/` directory
+- YAML frontmatter with `name`, `description`, `model`, `color`, `tools`
+
+### Required Fields
+- `name`: kebab-case identifier
+- `description`: when to trigger + `<example>` blocks showing trigger scenarios
+
+### Optional Fields
+- `model`: `inherit` (default), `sonnet`, `opus`, `haiku`
+- `color`: `cyan` (analysis), `green` (generation), `yellow` (validation), `red` (security)
+- `tools`: list of allowed tools (e.g., `["Read", "Grep", "Glob", "Bash"]`)
+
+### Body
+- System prompt defining the agent's role, process, and output format
+- 500-3000 words

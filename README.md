@@ -1,23 +1,24 @@
-# claude-skills
+# claude-toolkit
 
-Personal Claude Code skills and agents collection. Syncs across machines via git + symlinks.
+Personal Claude Code skills and agents. Syncs across machines via git + symlinks.
 
 ## Structure
 
 ```
-skill-name/
-└── SKILL.md              # required entrypoint
-└── references/           # optional supplementary docs
+skills/
+└── skill-name/
+    ├── SKILL.md              # required entrypoint
+    └── references/           # optional supplementary docs
 
 agents/
-└── agent-name.md         # agent definition with YAML frontmatter
+└── agent-name.md             # agent definition with YAML frontmatter
 ```
 
-Skills are flat (no nesting by language). Prefixes provide grouping:
+Skills use prefixes for grouping:
 - `ruby-*` — Ruby language conventions
 - `rails-*` — Rails framework patterns
 - `go-*` — Go language conventions
-- No prefix — language-agnostic or cross-cutting skills
+- No prefix — language-agnostic or cross-cutting
 
 ## Skills
 
@@ -79,33 +80,33 @@ Skills are flat (no nesting by language). Prefixes provide grouping:
 ## Installation
 
 ```bash
-git clone https://github.com/vlasikhin/claude-skills.git ~/.claude-skills && ~/.claude-skills/install.sh
+git clone https://github.com/vlasikhin/claude-toolkit.git ~/.claude-toolkit && ~/.claude-toolkit/install.sh
 ```
 
 Or link individually:
 
 ```bash
-ln -s ~/.claude-skills/ruby-style ~/.claude/skills/ruby-style
-ln -s ~/.claude-skills/agents/code-reviewer.md ~/.claude/agents/code-reviewer.md
+ln -s ~/.claude-toolkit/skills/ruby-style ~/.claude/skills/ruby-style
+ln -s ~/.claude-toolkit/agents/code-reviewer.md ~/.claude/agents/code-reviewer.md
 ```
 
 ## Creating a new skill
 
-Copy `_template/` and customize:
+Copy `skills/_template/` and customize:
 
 ```bash
-cp -r _template my-new-skill
+cp -r skills/_template skills/my-new-skill
 ```
 
 ## Updating
 
 ```bash
-cd ~/.claude-skills && git pull
+cd ~/.claude-toolkit && git pull
 ```
 
-Symlinks point to the repo, so pulling updates existing skills automatically.
+Symlinks point to the repo, so pulling updates existing skills and agents automatically.
 
-If new skills were added, run install to create their symlinks:
+If new items were added, run install to create their symlinks:
 
 ```bash
 ./install.sh
