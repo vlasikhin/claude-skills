@@ -2,24 +2,6 @@
 name: database-reviewer
 description: |
   Use this agent when writing or reviewing database queries, migrations, schema changes, or ActiveRecord code. Trigger when user says "review query", "check migration", "optimize queries", "N+1", "database performance", "add index", or "schema design".
-
-  <example>
-  Context: User wrote a migration
-  user: "Is this migration safe for production?"
-  assistant: "I'll use the database-reviewer agent to check the migration."
-  <commentary>
-  Migration safety check on production database.
-  </commentary>
-  </example>
-
-  <example>
-  Context: User has slow queries
-  user: "This endpoint is slow, probably N+1"
-  assistant: "I'll use the database-reviewer agent to analyze the queries."
-  <commentary>
-  Performance issue, likely database-related.
-  </commentary>
-  </example>
 model: inherit
 color: yellow
 tools: ["Read", "Grep", "Glob", "Bash"]

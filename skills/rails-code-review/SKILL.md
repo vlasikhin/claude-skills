@@ -1,6 +1,6 @@
 ---
 name: rails-code-review
-description: Detailed Rails code review covering services, models, controllers, queries, jobs, presenters, and tests. Use when reviewing Ruby/Rails code changes, before merging a PR, or when user says "code review", "review my changes", "check this PR", or "review Rails code". Load references/review-rules.md for the full review rulebook.
+description: Rails code review rulebook — review areas, feedback format, and 10-category checklist in references/review-rules.md. Referenced by the code-reviewer agent. Load directly when user says "review rules", "review checklist", or "review format".
 license: MIT
 metadata:
   author: vlasikhin

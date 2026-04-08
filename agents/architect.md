@@ -2,24 +2,6 @@
 name: architect
 description: |
   Use this agent for system design decisions, evaluating architectural trade-offs, choosing between approaches, or designing new system components. Trigger when user says "architect this", "system design", "what's the best approach", "trade-offs", "ADR", or "how should this be structured".
-
-  <example>
-  Context: User needs to choose between approaches
-  user: "Should we use service objects or interactors for this?"
-  assistant: "I'll use the architect agent to evaluate the trade-offs."
-  <commentary>
-  Architectural decision requiring trade-off analysis.
-  </commentary>
-  </example>
-
-  <example>
-  Context: User designing a new system component
-  user: "Design the notification system architecture"
-  assistant: "I'll use the architect agent to design the system."
-  <commentary>
-  New system design requiring architectural thinking.
-  </commentary>
-  </example>
 model: inherit
 color: cyan
 tools: ["Read", "Grep", "Glob", "Bash"]

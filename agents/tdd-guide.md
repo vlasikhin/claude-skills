@@ -1,25 +1,7 @@
 ---
 name: tdd-guide
 description: |
-  Use this agent when writing code test-first, implementing a feature with TDD, or when user wants guidance on the Red-Green-Refactor cycle. Trigger when user says "TDD this", "write tests first", "test-driven", "red green refactor", or "help me TDD".
-
-  <example>
-  Context: User starting a new feature
-  user: "I need to add password reset — let's TDD it"
-  assistant: "I'll use the tdd-guide agent to walk through the TDD process."
-  <commentary>
-  User explicitly wants TDD approach for a new feature.
-  </commentary>
-  </example>
-
-  <example>
-  Context: User fixing a bug
-  user: "There's a bug in discount calculation, let's write a failing test first"
-  assistant: "I'll use the tdd-guide agent to start with the failing test."
-  <commentary>
-  Bug fix with test-first approach.
-  </commentary>
-  </example>
+  Use this agent for interactive TDD sessions — writing code test-first with Red-Green-Refactor guidance. Trigger when user says "TDD this", "let's TDD", "help me TDD", or wants hands-on test-first implementation.
 model: inherit
 color: green
 tools: ["Read", "Grep", "Glob", "Bash", "Write", "Edit"]

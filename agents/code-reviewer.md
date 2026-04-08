@@ -2,24 +2,6 @@
 name: code-reviewer
 description: |
   Use this agent when reviewing code changes for quality, security, and Rails conventions. Trigger after implementing a feature, before merging a PR, or when user says "review this code", "check my changes", "code review", or "is this ready for PR".
-
-  <example>
-  Context: User just implemented a feature
-  user: "Review my changes"
-  assistant: "I'll use the code-reviewer agent to analyze your code."
-  <commentary>
-  Code changes exist, trigger review for quality and security.
-  </commentary>
-  </example>
-
-  <example>
-  Context: User is preparing a PR
-  user: "Is this ready to merge?"
-  assistant: "I'll use the code-reviewer agent to check before merging."
-  <commentary>
-  Pre-merge gate, review for issues.
-  </commentary>
-  </example>
 model: inherit
 color: cyan
 tools: ["Read", "Grep", "Glob", "Bash"]

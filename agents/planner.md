@@ -2,24 +2,6 @@
 name: planner
 description: |
   Use this agent when planning implementation of a complex feature, breaking down a large task, or designing a multi-step refactoring. Trigger when user says "plan this", "break this down", "implementation plan", "how should I approach", or "design the steps".
-
-  <example>
-  Context: User has a large feature to build
-  user: "I need to add multi-tenant support to the app, plan it out"
-  assistant: "I'll use the planner agent to create a phased implementation plan."
-  <commentary>
-  Complex feature requiring decomposition into manageable steps.
-  </commentary>
-  </example>
-
-  <example>
-  Context: User wants to refactor a large module
-  user: "Plan the refactoring of our payment system"
-  assistant: "I'll use the planner agent to design the refactoring approach."
-  <commentary>
-  Large refactor needs a plan to avoid breaking things.
-  </commentary>
-  </example>
 model: inherit
 color: cyan
 tools: ["Read", "Grep", "Glob", "Bash"]

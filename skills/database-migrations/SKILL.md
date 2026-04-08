@@ -1,6 +1,6 @@
 ---
 name: database-migrations
-description: Safe database migration patterns for Rails. Use when writing migrations for production databases, adding columns to large tables, or planning schema changes. Use when user says "write migration", "safe migration", "add column", "add index", "zero-downtime migration", or "strong_migrations".
+description: Safe database migration patterns for Rails — dangerous operations, concurrent indexes, expand-contract, batch backfills. Use when user says "write migration", "safe migration", "zero-downtime migration", or "strong_migrations". For query review and schema analysis, use the database-reviewer agent.
 license: MIT
 metadata:
   author: vlasikhin

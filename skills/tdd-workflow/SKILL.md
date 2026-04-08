@@ -1,6 +1,6 @@
 ---
 name: tdd-workflow
-description: Test-driven development process for Ruby projects. Use when starting a new feature, fixing a bug test-first, or when user wants to follow TDD. Use when user says "TDD", "test first", "write tests first", "red green refactor", or "test-driven".
+description: TDD reference for Ruby projects — process, test levels, coverage targets, anti-patterns. Use when user says "TDD rules", "TDD process", "test-driven guidelines", or needs TDD reference without hands-on guidance. For interactive TDD sessions, use the tdd-guide agent.
 license: MIT
 metadata:
   author: vlasikhin

@@ -2,24 +2,6 @@
 name: harness-optimizer
 description: |
   Use this agent to audit and optimize Claude Code configuration — skills, agents, MCP servers, and CLAUDE.md files. Trigger when user says "optimize harness", "audit config", "context budget", "too many tokens", "optimize skills", or "check my setup".
-
-  <example>
-  Context: User notices Claude Code is slow or context is large
-  user: "My Claude Code setup feels bloated, can you audit it?"
-  assistant: "I'll use the harness-optimizer agent to analyze the configuration."
-  <commentary>
-  Performance concern about Claude Code setup, trigger audit.
-  </commentary>
-  </example>
-
-  <example>
-  Context: User added many skills and wants a health check
-  user: "Check if my skills and agents are well-configured"
-  assistant: "I'll use the harness-optimizer agent to review the setup."
-  <commentary>
-  Configuration health check for skills/agents.
-  </commentary>
-  </example>
 model: inherit
 color: yellow
 tools: ["Read", "Grep", "Glob", "Bash"]
